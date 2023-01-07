@@ -1,0 +1,25 @@
+---
+import "../styles/hc.css";
+import "@fontsource/space-grotesk"
+
+export async function getStaticPaths() {
+  const projects = await Astro.glob('../project/*.md')
+
+  return projects.map((post) => ({
+    params: { 
+      slug: post.file.slice(42).slice(0,-3)
+    },
+    props: {
+      post
+    }
+  }))
+}
+
+const { Content, frontmatter } = Astro.props.post
+---
+<head>
+  <meta charset="utf-8" />
+</head>
+<article class=" prose max-w-fit p-4 prose-2xl prose-h1:pt-10">
+    <Content />
+</article>
