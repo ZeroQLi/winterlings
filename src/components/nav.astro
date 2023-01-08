@@ -1,15 +1,17 @@
 ---
 import '../styles/hc.css'
-const { right, left, page } = Astro.props;
+let { right, left, page } = Astro.props;
+let lright = '/p/'+right
+let lleft = '/p/'+left
 let github = 'https://github.com/'+page;
 ---
 <nav class=" flex justify-evenly p-4 bg-[#3c4858] w-full">
     <a href="/" class="absolute left-4 text-5xl">
         <img class="object-cover h-14 " src="/winter.png">
     </a>
-    <a href={left} class=" hover:scale-125 transition ease-in-out text-white "> <button class=" text-5xl lg "> &leftleftarrows; {left}</button> </a>
+    <a href={lleft} class=" hover:scale-125 transition ease-in-out text-white "> <button class=" text-5xl lg "> &leftleftarrows; {left}</button> </a>
     <a href={github}>
     <h1 class=" hover:scale-125 transition text-5xl ease-in-out text-white ">{page}</h1></a>
-    <a href={right} class=" hover:scale-125 transition ease-in-out text-white "> <button class=" text-5xl lg">{right} &rightrightarrows;</button> </a>
+    <a href={lright} class=" hover:scale-125 transition ease-in-out text-white "> <button class=" text-5xl lg">{right} &rightrightarrows;</button> </a>
     
 </nav>

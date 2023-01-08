@@ -2,6 +2,7 @@
     import '../styles/main.css'
 
     export let Name, Author, Summary, Link;
+    Link = '/p/'+Link
 </script>
 
 <div class="card hover:scale-125 transition ease-in-out">

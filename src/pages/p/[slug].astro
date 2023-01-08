@@ -1,19 +1,19 @@
 ---
-import '../styles/hc.css';
-import Nav from '../components/nav.astro'
-import Footer from '../components/footer.astro'
+import '../../styles/hc.css';
+import Nav from '../../components/nav.astro'
+import Footer from '../../components/footer.astro'
 import "@fontsource/space-grotesk"
 
 let arr = []
 
-const projects = await Astro.glob('../project/*.md')
+const projects = await Astro.glob('../../project/*.md')
 
 projects.forEach(item => {
   arr.push(item.file.slice(42).slice(0,-3))
 })
 
 export async function getStaticPaths() {
-  const projects = await Astro.glob('../project/*.md')
+  const projects = await Astro.glob('../../project/*.md')
 
   return projects.map((post) => ({
     params: { 
