@@ -1,5 +1,6 @@
 <script>
     import '../styles/main.css'
+
     export let Name, Author, Summary, Link;
 </script>
 

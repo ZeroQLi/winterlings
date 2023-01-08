@@ -421,8 +421,6 @@ hr {
 
 a {
   color: var(--primary);
-  text-decoration: underline;
-  text-underline-position: under;
 }
 
 a:focus,

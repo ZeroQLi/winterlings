@@ -1,6 +1,16 @@
 ---
-import "../styles/hc.css";
+import '../styles/hc.css';
+import Nav from '../components/nav.astro'
+import Footer from '../components/footer.astro'
 import "@fontsource/space-grotesk"
+
+let arr = []
+
+const projects = await Astro.glob('../project/*.md')
+
+projects.forEach(item => {
+  arr.push(item.file.slice(42).slice(0,-3))
+})
 
 export async function getStaticPaths() {
   const projects = await Astro.glob('../project/*.md')
@@ -15,11 +25,21 @@ export async function getStaticPaths() {
   }))
 }
 
-const { Content, frontmatter } = Astro.props.post
+const { Content, frontmatter, file } = Astro.props.post
+
+
+let page = file.slice(42).slice(0,-3)
+let right = arr[arr.indexOf(page)+1]
+let left = arr[arr.indexOf(page)-1]
+
 ---
 <head>
   <meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/winter.svg" />
+	<meta name="viewport" content="width=device-width" />
 </head>
-<article class=" prose max-w-fit p-4 prose-2xl prose-h1:pt-10">
+<Nav right={right} left={left} page={page}/>
+<article class=" prose max-w-none prose-xl m-5 prose-h1:pt-5">
     <Content />
 </article>
+<Footer/>

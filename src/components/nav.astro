@@ -1,0 +1,11 @@
+---
+import '../styles/hc.css'
+const { right, left, page } = Astro.props;
+---
+<nav class=" flex justify-evenly p-4  bg-[#3c4858] w-full">
+    <a href={left} class=" hover:scale-125 transition ease-in-out text-white "> <button class=" text-5xl lg "> &leftleftarrows; {left}</button> </a>
+    <a href="/">
+    <h1 class=" hover:scale-125 transition text-5xl ease-in-out text-white ">{page}</h1></a>
+    <a href={right} class=" hover:scale-125 transition ease-in-out text-white "> <button class=" text-5xl lg">{right} &rightrightarrows;</button> </a>
+    
+</nav>
