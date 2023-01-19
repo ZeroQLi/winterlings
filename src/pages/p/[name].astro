@@ -27,7 +27,7 @@ let page = file.slice(42).slice(0,-3)
 	<link rel="icon" type="image/svg+xml" href="/winter.svg" />
 	<meta name="viewport" content="width=device-width" />
 </head>
-<Nav page={page} name={name}/>
+<Nav  client:load page={page} name={name}/>
 <article class=" prose max-w-none prose-xl m-5 prose-h1:pt-5">
     <Content />
 </article>

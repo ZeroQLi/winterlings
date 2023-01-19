@@ -1,6 +1,5 @@
 ---
-name: "@winstoniskandar"
-name: "@mayuridev"
+name: ["@winstoniskandar","@mayuridev"]
 project: "Sound-Reactive Light Show"
 ---
 

@@ -1,6 +1,6 @@
 ---
-name: @sofiykam
-project: AI Healthcare ML Predictictor
+name: "@sofiykam"
+project: "AI Healthcare ML Predictictor"
 ---
 
 # AI Healthcare ML Predictor

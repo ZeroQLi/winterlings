@@ -1,10 +1,6 @@
-
 ---
-
-name: @HarjotSuiingh
-
-project: E-ink Smart Display
-
+name: "@HarjotSuiingh"
+project: "E-ink Smart Display"
 ---
 
 
