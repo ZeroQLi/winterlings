@@ -5,7 +5,7 @@ import Footer from "../components/footer.astro"
 import "@fontsource/space-grotesk"
 import "@fontsource/satisfy"
 
-import { HelloAstro } from 'hello-astro'; //this throws an error eventhough it builds just fine, no idea why
+//import { HelloAstro } from 'hello-astro'; //this throws an error eventhough it builds just fine, no idea why
 
 const projects = await Astro.glob("../**/*.md");
 ---
@@ -25,7 +25,7 @@ const projects = await Astro.glob("../**/*.md");
 		
 		
 	<div class="transition ease-in-out bg-sky-500 p-10">
-		<h4 class="flex justify-center text-slate-800 text-3xl pb-4"><HelloAstro />, Welcome to</h4>
+		<h4 class="flex justify-center text-slate-800 text-3xl pb-4">hi there, Welcome to</h4>
         <h1 class=" font-['Satisfy'] text-white flex text-9xl justify-center pb-9">Winterlings</h1>
         <h3 class=" flex font-bold text-4xl justify-center pb-3">
             <i>Check out all the projects hack clubbers are building this winter</i>
