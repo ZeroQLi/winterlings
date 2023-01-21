@@ -10,7 +10,7 @@ let left = '/p/'+ names[names.indexOf(page)-1]
 var credentials = btoa(import.meta.env.PUBLIC_USER+':'+import.meta.env.PUBLIC_TOKEN);
 var auth = { "Authorization" : `Basic ${credentials}` };
 
-//let promise = fetch('https://api.github.com/users/'+page, { headers : auth }).then((x) => x.json());
+let promise = fetch('https://api.github.com/users/'+page, { headers : auth }).then((x) => x.json());
 
 </script>
 <nav class="">
@@ -29,13 +29,13 @@ var auth = { "Authorization" : `Basic ${credentials}` };
     </div>
      
     <div class=" text-teal-200 flex justify-evenly bg-slate-500 p-2">
-         <!-- {#await promise} 
+         {#await promise} 
                     <h1>loading</h1>
             {:then data}
                 <h2>Location: {data.location}</h2>
             {:catch error}
 	            <p>An error occurred!</p>
-            {/await} -->
+            {/await}
             <h3> Location: india</h3>
         {#if Array.isArray(name)}
             <h3 class="text-slate-100">members: </h3>
