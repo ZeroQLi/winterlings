@@ -195,7 +195,4 @@ CNC Machine:
 
 As engineering students, we feel we could learn a lot from each project, as they each tackle different topics (large scale machine design, digital electronics, and improved understanding of computers). They each have application in our lives outside of being learning experiences. Me and Jaylan will use our macropads for art and CAD, and Cleifton does not have a computer for programming and CAD design. The CNC will be freely usable by any of us in any of our projects, to mill wood, foam, or PCBS. 
 
-We would also like to thank hack club for giving others like us the opportunity to learn and further oour computer sciences knowledge. I hope to be able to demonstrate my love of computers and technology to others in this community. 
-
-
-					
+We would also like to thank hack club for giving others like us the opportunity to learn and further oour computer sciences knowledge. I hope to be able to demonstrate my love of computers and technology to others in this community.

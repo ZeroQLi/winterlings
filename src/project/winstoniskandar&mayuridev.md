@@ -3,8 +3,7 @@ name: ["@winstoniskandar","@mayuridev"]
 project: "Sound-Reactive Light Show"
 ---
 
-# Project Name
-Sound-Reactive Light Show
+# Sound-Reactive Light Show
 
 ## Summary
 
