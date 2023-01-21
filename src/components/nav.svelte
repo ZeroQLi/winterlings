@@ -32,15 +32,15 @@ let promise = fetch('https://api.github.com/users/'+page, { headers : auth }).th
          {#await promise} 
                     <h1>loading</h1>
             {:then data}
-                <h2>Location: {data.location}</h2>
+                <h2 class="lg:text-3xl">Location: {data.location}</h2>
             {:catch error}
 	            <p>An error occurred!</p>
             {/await}
         {#if Array.isArray(name)}
-            <h3 class="text-slate-100">members: </h3>
+            <h3 class=" lg:text-3xl text-slate-100">members: </h3>
             {#each name as git}
                 <a href={'https://github.com/'+git}>
-                <h3 class=" lg:text-1xl hover:scale-125 transition ease-in-out text-white ">{git}</h3></a>
+                <h3 class=" lg:text-3xl hover:scale-125 transition ease-in-out text-white ">{git}</h3></a>
             {/each}
         {/if}
     </div>
