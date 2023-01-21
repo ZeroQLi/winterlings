@@ -36,7 +36,6 @@ let promise = fetch('https://api.github.com/users/'+page, { headers : auth }).th
             {:catch error}
 	            <p>An error occurred!</p>
             {/await}
-            <h3> Location: india</h3>
         {#if Array.isArray(name)}
             <h3 class="text-slate-100">members: </h3>
             {#each name as git}
