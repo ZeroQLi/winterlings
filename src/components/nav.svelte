@@ -10,7 +10,7 @@ let left = '/p/'+ names[names.indexOf(page)-1]
 var credentials = btoa(import.meta.env.PUBLIC_USER+':'+import.meta.env.PUBLIC_TOKEN);
 var auth = { "Authorization" : `Basic ${credentials}` };
 
-let promise = fetch('https://api.github.com/users/'+page, { headers : auth }).then((x) => x.json());
+let promise = fetch('https://api.github.com/users/'+(Array.isArray(name) ? name[0].slice(1) : name.slice(1)), { headers : auth }).then((x) => x.json());
 
 </script>
 <nav class="">
@@ -21,7 +21,7 @@ let promise = fetch('https://api.github.com/users/'+page, { headers : auth }).th
         <a href={left} class=" lg:block hidden hover:scale-125 transition ease-in-out text-white "> <button class="lg text-3xl"> &leftleftarrows; {left}</button> </a>
         <a href={left} class=" lg:hidden  hover:scale-125 transition ease-in-out text-white "> <button class="lg text-2xl"> previous </button> </a>
 
-        <a href={'https://github.com/users/'+name.slice(1)}> 
+        <a href={'https://github.com/'+(Array.isArray(name) ? name[0].slice(1) : name.slice(1))}> 
             <h1 class=" text-5xl hover:scale-125 transition ease-in-out text-white">{page}</h1></a>
 
         <a href={right} class=" lg:block hidden hover:scale-125 transition ease-in-out text-white "> <button class="lg text-3xl">{right} &rightrightarrows;</button> </a> 
@@ -39,7 +39,7 @@ let promise = fetch('https://api.github.com/users/'+page, { headers : auth }).th
         {#if Array.isArray(name)}
             <h3 class=" lg:text-3xl text-slate-100">members: </h3>
             {#each name as git}
-                <a href={'https://github.com/'+git}>
+                <a href={'https://github.com/'+git.slice(1)}>
                 <h3 class=" lg:text-3xl hover:scale-125 transition ease-in-out text-white ">{git}</h3></a>
             {/each}
         {/if}
