@@ -1,14 +1,14 @@
 ---
 import '../../styles/hc.css';
 import Nav from '../../components/nav.svelte'
-import Footer from '../../components/footer.astro'
+import Footer from '../../components/footer.svelte'
 import "@fontsource/space-grotesk"
 
 export async function getStaticPaths() {
   const projects = await Astro.glob('../../project/*.md')
   return projects.map((post) => ({
     params: { 
-      slug: post.file.slice(42).slice(0,-3)
+      slug: ( Array.isArray(post.frontmatter.name) ? post.frontmatter.name[0].slice(1) : post.frontmatter.name.slice(1))
     },
     props: {
       post
@@ -19,7 +19,8 @@ export async function getStaticPaths() {
 const { Content, frontmatter, file } = Astro.props.post
 
 let name = frontmatter.name;
-let page = file.slice(42).slice(0,-3)
+let page = ( Array.isArray(frontmatter.name) ? frontmatter.name[0].slice(1) : frontmatter.name.slice(1))
+console.log();
 
 ---
 <head>
@@ -31,4 +32,4 @@ let page = file.slice(42).slice(0,-3)
 <article class=" prose max-w-none prose-xl m-5 prose-h1:pt-5">
     <Content />
 </article>
-<Footer/>
+<Footer client:visible/>
