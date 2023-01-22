@@ -19,22 +19,22 @@ const projects = await Astro.glob("../**/*.md");
     	<!-- <link rel="stylesheet" href="https://css.hackclub.com/fonts.css" /> -->
 		<title>Astro</title>
 	</head>
-	<body>
-	<a href="https://hackclub.com/">
-    <img class="lg:block md:block hidden" style="position: absolute; top: 0; right: 15px; border: 0; width: 150px; z-index: 999;"src="https://assets.hackclub.com/flag-orpheus-top.svg"alt="Hack Club"/></a>
+	<body class="">
+	<a class="md:block hidden" href="https://hackclub.com/">
+    <img class="lg:block md:block" style="position: absolute; top: 0; right: 15px; border: 0; width: 150px; z-index: 999;"src="https://assets.hackclub.com/flag-orpheus-top.svg"alt="Hack Club"/></a>
 		
 		
-	<div class=" transition ease-in-out bg-sky-500 p-10">
-		<h4 class=" text-slate-800 text-3xl pb-4 flex justify-center">hi there, Welcome to</h4>
-        <h1 class=" text-9xl font-['Satisfy'] text-white pb-9 flex justify-center">Winterlings</h1>
-        <h3 class=" font-bold text-4xl pb-3 flex justify-center">
+	<div class=" transition ease-in-out bg-sky-500 p-5">
+		<h4 class="md:text-3xl text-2xl text-slate-800  pb-4 flex justify-center">hi there, Welcome to</h4>
+        <h1 class="md:text-9xl text-7xl font-['Satisfy'] text-white pb-9 flex justify-center">Winterlings</h1>
+        <h3 class="md:text-4xl text-1xl font-bold  pb-3 flex justify-center">
             <i>Check out all the projects hack clubbers are building this winter</i>
         </h3>
 		<a class="flex justify-center "href="https://hackclub.com/winter"><h3 class="text-2xl hover:scale-125 text-red-300 transition ease-in-out ">what's this all about?</h3>
 		</a>
     </div>
     
-    <div class=" bg-[#252429] p-9 grid gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+    <div class=" bg-[#252429] md:p-9 p-3 grid gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
 		{projects.map((post) => 
 		<Card Name={post.frontmatter.project} Author={post.frontmatter.name} Summary={post.frontmatter.summary} Link={( Array.isArray(post.frontmatter.name) ? post.frontmatter.name[0].slice(1) : post.frontmatter.name.slice(1))}/>
 		)}

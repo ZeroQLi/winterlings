@@ -11,11 +11,11 @@
     {#if Array.isArray(Author)}
         {#each Author as auth}
         <a class=" hover:text-pink-700 transition ease-in-out" href={'https://github.com/'+auth.slice(1)}>
-            <h1 class=" inline text-3xl">{auth} </h1></a>
+            <h1 class=" inline md:text-3xl text-1xl font-italics">{auth} </h1></a>
         {/each}
     {:else}
-        <a class=" hover:text-red-700 transition ease-in-out" href={'https://github.com/'+Author.slice(1)}>
-            <h1 class=" text-3xl font-italics ">{Author}</h1></a>
+        <a class="overflow-auto hover:text-red-700 transition ease-in-out" href={'https://github.com/'+Author.slice(1)}>
+            <h1 class=" md:text-3xl text-1xl font-italics ">{Author}</h1></a>
     {/if}
 
     </a>
