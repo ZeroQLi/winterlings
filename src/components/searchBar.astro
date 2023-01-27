@@ -1,0 +1,6 @@
+---
+import Search from './search.svelte';
+const posts = await Astro.glob('../**/*.md');
+---
+
+<Search client:load searchList={posts} />
