@@ -6,13 +6,8 @@ import "@fontsource/space-grotesk"
 import "@fontsource/satisfy"
 
 //import { HelloAstro } from 'hello-astro'; //this throws an error eventhough it builds just fine, no idea why
-let pain=[]
 const projects = await Astro.glob("../**/*.md");
-projects.map((post) => {
-	console.log(post.frontmatter.name);
-	
-	pain.push(post.frontmatter.name)
-})
+
 ---
 
 <html lang="en">
@@ -40,8 +35,7 @@ projects.map((post) => {
     </div>
 
     <div class=" bg-[#252429] md:p-9 p-3 grid gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-		{projects.map((post) => 
-
+		{projects.map((post) =>
 		<Card Name={post.frontmatter.project} Author={post.frontmatter.name} Summary={post.frontmatter.summary} Link={( Array.isArray(post.frontmatter.name) ? post.frontmatter.name[0].slice(1) : post.frontmatter.name.slice(1))}/>
 		)}
     </div>
