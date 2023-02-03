@@ -3,7 +3,9 @@ name: ["@grammarfruit", "@roseappletpe"]
 project: "LucidVR Haptic Gloves with RC Car and Robot Arm"
 ---
 
-# LucidVR Haptic Gloves with RC Car and Robot Arm
+# Project Name
+
+LucidVR Haptic Gloves with RC Car and Robot Arm
 
 ## Summary
 

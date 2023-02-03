@@ -2,6 +2,7 @@
 name: "@clive223"
 project: "smart music system using rasberrry pi and self made speakers"
 ---
+
 # smart music system
 
 ## Summary

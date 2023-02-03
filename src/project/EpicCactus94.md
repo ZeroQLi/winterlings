@@ -3,7 +3,7 @@ name: "@EpicCactus94"
 project: "Self Balancing Reaction Wheel Cube"
 ---
 
-# Self Balancing Reaction Wheel Cube
+# Project Name: Self Balancing Reaction Wheel Cube
 
 ## Summary
 
